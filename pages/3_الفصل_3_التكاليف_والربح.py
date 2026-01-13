@@ -12,7 +12,18 @@ st.title("🏭 الفصل 3: الإنتاج، التكاليف، والربح")
 with st.expander("📌 ملخص نظري سريع", expanded=False):
     st.markdown(open("content/ch3.md", encoding="utf-8").read())
 
-st.subheader("نموذج مبسّط للتكلفة:  TC(Q) = FC + αQ + βQ²")
+# --- Simple cost construction ---
+VC = []
+current_cost = 0
+
+for q in Q:
+    marginal_cost = alpha + beta * q       # MC increases gradually
+    current_cost += marginal_cost
+    VC.append(current_cost)
+
+VC = np.array(VC)
+TC = FC + VC
+
 
 col1, col2, col3 = st.columns(3)
 with col1:
