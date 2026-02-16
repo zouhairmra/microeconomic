@@ -31,15 +31,6 @@ with col2:
 st.markdown("---")
 st.markdown(
     """
-    ```bash
-    git init
-    git add .
-    git commit -m "Initial commit: Microeconomics Arabic Streamlit module"
-    git branch -M main
-    git remote add origin https://github.com/<USER>/<REPO>.git
-    git push -u origin main
-    ```
-
     ثم انشر عبر Streamlit Community Cloud وحدّد `app.py` كملف التشغيل.
     """
 )
